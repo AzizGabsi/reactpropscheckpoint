@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Photo from "./profile/photo.jpg";
+import Profile from "./profile/Profile"
 
-function App() {
+export default function App() {
+  const fullName="Aziz Gabsi"
+  const handleName=()=>{
+    alert(`${fullName}`)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Profile fullName ={fullName} bio = "22 year old male" profession = "Beginner Full-Stack Developer" handleName={handleName}>
+        <img src={Photo} style={{width: "20vw", marginTop: "20px", border: "solid"}} />
+        
+      </Profile>
     </div>
   );
 }
 
-export default App;
